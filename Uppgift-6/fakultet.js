@@ -1,21 +1,36 @@
-// Räkna ut fakultet på en siffra mellan 1-1000
-
+// Räkna ut fakultet
 while (true) {
     let tal = prompt('Ange ett tal mellan 1-1000'); // Användaren matar in ett tal 
-    if (isNaN(tal)) { 
+    if (tal === null) { // om man trycker på cancel
+      alert('Hejdå'); 
+        break;
+    }
+    if (tal.length == 0) { // Om man slår enter
         continue;
-    } else if (tal > 1000 || tal < 1) {
-        alert('Du måste ange ett tal mellan 1-1000'); // Felmedelande
-    } else if (tal <= 1000) {
-        document.write(tal + '! = ' +factorial(tal)) // Skriver ut resultatet på websidan
+    } 
+    else if (isNaN(tal)) { // om man trycker bokstöver t.ex
+        alert("Inte ett tal mellan 1 - 1000");
+        continue;
+    }
+    else if ((tal < 1) || (tal > 1000)) { // om talet är större eller mindre än det ska vara
+        alert("Inte ett tal mellan 1 - 1000");
+        continue;
+    }
+    let rt = factorial(tal); // kollar om talet är för stort för uträkningen
+    if (!isFinite(rt)) {                               
+        alert("Talet är för stort för att javascript ska räkna ut fakultet");
+        continue;
+    }
+    else{
+        document.write(tal + "!=" + rt); // // Skriver ut resultatet på websidan
         break;
     }
 
 }
 // Formeln för fakultet
-function factorial(tal) { 
-    for (let i = tal - 1; i >= 1; i--) {  
-        tal = tal * i; 
+function factorial(tal) {
+    for (let i = tal - 1; i >= 1; i--) { 
+        tal = tal * i; // räknar ut fakultet
     }
-    return tal;  // klar med loopen så returnerar du det muterade talet
+    return tal;
 }

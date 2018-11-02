@@ -51,8 +51,10 @@ över förekomsten av ettor, tvåor, osv.
       console.log('Frequency of the number five:\t' + five);
       console.log('Frequency of the number six:\t' + six);
   }
+
+  // Anropar fuktionen och skriver ut tabellerna 
   print();
-  console.log('------------------');
+  console.log('------------------'); 
   print();
   console.log('------------------');
   print(); 

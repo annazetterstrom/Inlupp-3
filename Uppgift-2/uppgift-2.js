@@ -11,3 +11,4 @@ function(x, y){
 document.write("Hypothenusan är " + Math.hypot(x, y));
 
 
+

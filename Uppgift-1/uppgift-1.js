@@ -4,7 +4,7 @@ function Person(name, email, phone, address) {
     this.name = name;
     this.email = email;
     this.phone = phone;
-    this.address = address;
+    this.address = address; 
 
     this.print = function () { // En funktion som skriver ut den aktuella informationen. 
         console.log(this.name + "\n\n" +

@@ -16,7 +16,7 @@ över förekomsten av ettor, tvåor, osv.
   function randomDice(){
       let diceArray = [];
       for(let i = 0; i < 1000; i++){
-          diceArray.push(Math.floor(Math.random() * 6 + 1)); // math.random kan ge en nolla så därför läger man till +1 * 6 för att random returnerar 0-0.9
+          diceArray.push(Math.floor(Math.random() * 6 + 1)); // Math.random * 6 kan ge ett heltal 0-6 därför lägger man till +1
       }
       return diceArray;
   }

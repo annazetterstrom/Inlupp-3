@@ -1,5 +1,5 @@
 // Räkna ut fakultet på en siffra mellan 1-1000
-// Använder en
+
 while (true) {
     let tal = prompt('Ange ett tal mellan 1-1000'); 
     if (isNaN(tal)) {
